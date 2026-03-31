@@ -1,85 +1,73 @@
-# Student-Pass-Prediction-System
+📘 Student Pass Prediction System
 
-A CLI-based Machine Learning application that utilizes a Decision Tree Classifier to predict student academic success based on behavioral metrics. This project demonstrates data synthesis, feature engineering, and model evaluation within a professional Python environment.
+A simple machine learning project that predicts whether a student will pass or fail based on study habits and academic behavior using a Decision Tree Classifier.
 
-🚀 Overview
-This system identifies "at-risk" students by analyzing:
+🚀 Features
+Generates a synthetic dataset of student performance
+Uses key factors:
+Hours studied
+Attendance
+Assignments completed
+Class participation
+Trains a Decision Tree model
+Evaluates model performance with:
+Accuracy score
+Confusion matrix
+Classification report
+Saves a visual representation of the decision tree
+🛠️ Tech Stack
+Python
+Pandas
+NumPy
+Matplotlib
+Scikit-learn
+📂 Project Structure
+├── README.md
+├── Student Pass Prediction System.py
+├── Student Pass Prediction System.txt
+⚙️ How It Works
+Dataset Creation
+Generates synthetic student data using NumPy.
+Defines passing criteria:
+Combined academic effort score > 22
+Attendance > 65%
+Data Preparation
+Splits dataset into training and testing sets (80/20).
+Model Training
+Uses a Decision Tree Classifier with max depth = 3.
+Evaluation
+Predicts outcomes on test data.
+Displays accuracy and classification report.
+Visualization
+Saves the decision tree as an image (model_visualization.png).
+▶️ How to Run
+Install dependencies:
+pip install pandas numpy matplotlib scikit-learn
+Run the script:
+python "Student Pass Prediction System.py"
+📊 Output
+Console output:
+Sample dataset preview
+Model accuracy
+Classification report
+File generated:
+model_visualization.png (Decision Tree diagram)
+📌 Example Output
+Accuracy: 95.00%
 
-Study Habits: Hours studied per week.
+Classification Report:
+              precision    recall  f1-score   support
+...
+🎯 Use Case
 
-Engagement: Assignment completion and class participation.
+This project demonstrates:
 
-Attendance: Historical presence in the classroom.
-
-The model provides not just a prediction, but a Visual Logic Tree (results_tree.png) that explains the "why" behind every "Pass" or "Fail" decision.
-
-🛠️ Installation & Setup
-1. Prerequisites
-Python 3.8+ installed on your system.
-
-Git installed for repository cloning.
-
-2. Clone the Repository
-Open your terminal and run:
-
-Bash
-git clone https://github.com/{your-github-username}/{your-repo-name}
-cd {your-repo-name}
-3. Environment Configuration (Recommended)
-It is best practice to use a virtual environment to avoid dependency conflicts:
-
-Bash
-# Create the environment
-python -m venv venv
-
-# Activate it
-# On Windows:
-venv\Scripts\activate
-# On Mac/Linux:
-source venv/bin/activate
-4. Install Dependencies
-Install the required libraries (pandas, scikit-learn, matplotlib, numpy):
-
-Bash
-pip install -r requirements.txt
-💻 Execution (CLI)
-This project is fully executable via the command line. You can specify the number of students to simulate using the --samples argument.
-
-Run the default analysis (200 students):
-
-Bash
-python main.py
-Run with a custom sample size (e.g., 500 students):
-
-Bash
-python main.py --samples 500
-📊 Project Structure
-Plaintext
-├── main.py              # Core application logic & ML pipeline
-├── requirements.txt     # Project dependencies
-├── REPORT.md            # In-depth technical analysis & syllabus coverage
-├── results_tree.png     # Generated visualization of the Decision Tree
-└── README.md            # Project documentation (this file)
-📈 Expected Output
-Upon successful execution, the script will:
-
-Generate a synthetic dataset of student profiles.
-
-Perform Feature Engineering to calculate an effort-based score.
-
-Train a Decision Tree Classifier.
-
-Print Accuracy, Precision, Recall, and a Confusion Matrix to the terminal.
-
-Save a high-resolution visualization of the model's logic as results_tree.png.
-
-📝 Syllabus Coverage
-This project serves as a practical application of the following course concepts:
-
-Supervised Learning: Binary classification using Decision Trees.
-
-Regularization: Preventing overfitting via tree depth constraints.
-
-Data Preprocessing: Handling train-test splits and feature synthesis.
-
-Evaluation Metrics: Interpreting Confusion Matrices and F1-Scores.
+Basic machine learning workflow
+Classification using decision trees
+Model evaluation techniques
+Data visualization for interpretability
+🔮 Future Improvements
+Use real student datasets
+Add more features (e.g., exam scores)
+Try other models (Random Forest, Logistic Regression)
+Build a web interface using Flask or Streamlit
